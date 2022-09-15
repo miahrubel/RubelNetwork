@@ -1,0 +1,599 @@
+h1 {
+    text-align: center;
+}
+
+.portfolioAlign {
+    height: 100px;
+    width: 700px;
+    margin: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.notesnetworkalign {
+    height: 70px;
+    width: 70px;
+    /* margin: 10px; */
+    margin: 10px auto;
+    text-align: center;
+    position: relative;
+}
+
+/*  Animation blue star Background  */ 
+
+@font-face {
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 300;
+    src: url(https://fonts.gstatic.com/s/robotomono/v21/L0xuDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_gPq_SeW4Ep0.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+  }
+
+body {
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    font-family: "Anton", sans-serif;
+    justify-content: center;
+    align-items: center;
+}
+
+.night {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: rotateZ(45deg);
+}
+
+.shooting_star {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 2px;
+    background: linear-gradient(-45deg, #5f91ff, rgba(0, 0, 255, 0));
+    border-radius: 999px;
+    filter: drop-shadow(0 0 6px #699bff);
+    -webkit-animation: tail 3000ms ease-in-out infinite, shooting 3000ms ease-in-out infinite;
+    animation: tail 3000ms ease-in-out infinite, shooting 3000ms ease-in-out infinite;
+}
+
+.shooting_star::before {
+    content: "";
+    position: absolute;
+    top: calc(50% - 1px);
+    right: 0;
+    height: 2px;
+    background: linear-gradient(-45deg, rgba(0, 0, 255, 0), #5f91ff, rgba(0, 0, 255, 0));
+    transform: translateX(50%) rotateZ(45deg);
+    border-radius: 100%;
+    -webkit-animation: shining 3000ms ease-in-out infinite;
+    animation: shining 3000ms ease-in-out infinite;
+}
+
+.shooting_star::after {
+    content: "";
+    position: absolute;
+    top: calc(50% - 1px);
+    right: 0;
+    height: 2px;
+    background: linear-gradient(-45deg, rgba(0, 0, 255, 0), #5f91ff, rgba(0, 0, 255, 0));
+    transform: translateX(50%) rotateZ(45deg);
+    border-radius: 100%;
+    -webkit-animation: shining 3000ms ease-in-out infinite;
+    animation: shining 3000ms ease-in-out infinite;
+    transform: translateX(50%) rotateZ(-45deg);
+}
+
+.shooting_star:nth-child(1) {
+    top: calc(50% - -32px);
+    left: calc(50% - 116px);
+    -webkit-animation-delay: 1714ms;
+    animation-delay: 1714ms;
+}
+
+.shooting_star:nth-child(1)::before,
+.shooting_star:nth-child(1)::after {
+    -webkit-animation-delay: 1714ms;
+    animation-delay: 1714ms;
+}
+
+.shooting_star:nth-child(2) {
+    top: calc(50% - 68px);
+    left: calc(50% - 254px);
+    -webkit-animation-delay: 9186ms;
+    animation-delay: 9186ms;
+}
+
+.shooting_star:nth-child(2)::before,
+.shooting_star:nth-child(2)::after {
+    -webkit-animation-delay: 9186ms;
+    animation-delay: 9186ms;
+}
+
+.shooting_star:nth-child(3) {
+    top: calc(50% - 62px);
+    left: calc(50% - 100px);
+    -webkit-animation-delay: 3065ms;
+    animation-delay: 3065ms;
+}
+
+.shooting_star:nth-child(3)::before,
+.shooting_star:nth-child(3)::after {
+    -webkit-animation-delay: 3065ms;
+    animation-delay: 3065ms;
+}
+
+.shooting_star:nth-child(4) {
+    top: calc(50% - -94px);
+    left: calc(50% - 127px);
+    -webkit-animation-delay: 6223ms;
+    animation-delay: 6223ms;
+}
+
+.shooting_star:nth-child(4)::before,
+.shooting_star:nth-child(4)::after {
+    -webkit-animation-delay: 6223ms;
+    animation-delay: 6223ms;
+}
+
+.shooting_star:nth-child(5) {
+    top: calc(50% - -169px);
+    left: calc(50% - 35px);
+    -webkit-animation-delay: 2088ms;
+    animation-delay: 2088ms;
+}
+
+.shooting_star:nth-child(5)::before,
+.shooting_star:nth-child(5)::after {
+    -webkit-animation-delay: 2088ms;
+    animation-delay: 2088ms;
+}
+
+.shooting_star:nth-child(6) {
+    top: calc(50% - 56px);
+    left: calc(50% - 125px);
+    -webkit-animation-delay: 534ms;
+    animation-delay: 534ms;
+}
+
+.shooting_star:nth-child(6)::before,
+.shooting_star:nth-child(6)::after {
+    -webkit-animation-delay: 534ms;
+    animation-delay: 534ms;
+}
+
+.shooting_star:nth-child(7) {
+    top: calc(50% - 19px);
+    left: calc(50% - 277px);
+    -webkit-animation-delay: 1028ms;
+    animation-delay: 1028ms;
+}
+
+.shooting_star:nth-child(7)::before,
+.shooting_star:nth-child(7)::after {
+    -webkit-animation-delay: 1028ms;
+    animation-delay: 1028ms;
+}
+
+.shooting_star:nth-child(8) {
+    top: calc(50% - 108px);
+    left: calc(50% - 80px);
+    -webkit-animation-delay: 7710ms;
+    animation-delay: 7710ms;
+}
+
+.shooting_star:nth-child(8)::before,
+.shooting_star:nth-child(8)::after {
+    -webkit-animation-delay: 7710ms;
+    animation-delay: 7710ms;
+}
+
+.shooting_star:nth-child(9) {
+    top: calc(50% - 73px);
+    left: calc(50% - 297px);
+    -webkit-animation-delay: 7745ms;
+    animation-delay: 7745ms;
+}
+
+.shooting_star:nth-child(9)::before,
+.shooting_star:nth-child(9)::after {
+    -webkit-animation-delay: 7745ms;
+    animation-delay: 7745ms;
+}
+
+.shooting_star:nth-child(10) {
+    top: calc(50% - 96px);
+    left: calc(50% - 8px);
+    -webkit-animation-delay: 4416ms;
+    animation-delay: 4416ms;
+}
+
+.shooting_star:nth-child(10)::before,
+.shooting_star:nth-child(10)::after {
+    -webkit-animation-delay: 4416ms;
+    animation-delay: 4416ms;
+}
+
+.shooting_star:nth-child(11) {
+    top: calc(50% - 12px);
+    left: calc(50% - 178px);
+    -webkit-animation-delay: 8155ms;
+    animation-delay: 8155ms;
+}
+
+.shooting_star:nth-child(11)::before,
+.shooting_star:nth-child(11)::after {
+    -webkit-animation-delay: 8155ms;
+    animation-delay: 8155ms;
+}
+
+.shooting_star:nth-child(12) {
+    top: calc(50% - 118px);
+    left: calc(50% - 39px);
+    -webkit-animation-delay: 6080ms;
+    animation-delay: 6080ms;
+}
+
+.shooting_star:nth-child(12)::before,
+.shooting_star:nth-child(12)::after {
+    -webkit-animation-delay: 6080ms;
+    animation-delay: 6080ms;
+}
+
+.shooting_star:nth-child(13) {
+    top: calc(50% - 139px);
+    left: calc(50% - 22px);
+    -webkit-animation-delay: 6160ms;
+    animation-delay: 6160ms;
+}
+
+.shooting_star:nth-child(13)::before,
+.shooting_star:nth-child(13)::after {
+    -webkit-animation-delay: 6160ms;
+    animation-delay: 6160ms;
+}
+
+.shooting_star:nth-child(14) {
+    top: calc(50% - 84px);
+    left: calc(50% - 217px);
+    -webkit-animation-delay: 4133ms;
+    animation-delay: 4133ms;
+}
+
+.shooting_star:nth-child(14)::before,
+.shooting_star:nth-child(14)::after {
+    -webkit-animation-delay: 4133ms;
+    animation-delay: 4133ms;
+}
+
+.shooting_star:nth-child(15) {
+    top: calc(50% - -97px);
+    left: calc(50% - 160px);
+    -webkit-animation-delay: 7967ms;
+    animation-delay: 7967ms;
+}
+
+.shooting_star:nth-child(15)::before,
+.shooting_star:nth-child(15)::after {
+    -webkit-animation-delay: 7967ms;
+    animation-delay: 7967ms;
+}
+
+.shooting_star:nth-child(16) {
+    top: calc(50% - -85px);
+    left: calc(50% - 142px);
+    -webkit-animation-delay: 7820ms;
+    animation-delay: 7820ms;
+}
+
+.shooting_star:nth-child(16)::before,
+.shooting_star:nth-child(16)::after {
+    -webkit-animation-delay: 7820ms;
+    animation-delay: 7820ms;
+}
+
+.shooting_star:nth-child(17) {
+    top: calc(50% - 100px);
+    left: calc(50% - 226px);
+    -webkit-animation-delay: 9071ms;
+    animation-delay: 9071ms;
+}
+
+.shooting_star:nth-child(17)::before,
+.shooting_star:nth-child(17)::after {
+    -webkit-animation-delay: 9071ms;
+    animation-delay: 9071ms;
+}
+
+.shooting_star:nth-child(18) {
+    top: calc(50% - -100px);
+    left: calc(50% - 116px);
+    -webkit-animation-delay: 8614ms;
+    animation-delay: 8614ms;
+}
+
+.shooting_star:nth-child(18)::before,
+.shooting_star:nth-child(18)::after {
+    -webkit-animation-delay: 8614ms;
+    animation-delay: 8614ms;
+}
+
+.shooting_star:nth-child(19) {
+    top: calc(50% - -78px);
+    left: calc(50% - 30px);
+    -webkit-animation-delay: 3000ms;
+    animation-delay: 3000ms;
+}
+
+.shooting_star:nth-child(19)::before,
+.shooting_star:nth-child(19)::after {
+    -webkit-animation-delay: 3000ms;
+    animation-delay: 3000ms;
+}
+
+.shooting_star:nth-child(20) {
+    top: calc(50% - -156px);
+    left: calc(50% - 163px);
+    -webkit-animation-delay: 443ms;
+    animation-delay: 443ms;
+}
+
+.shooting_star:nth-child(20)::before,
+.shooting_star:nth-child(20)::after {
+    -webkit-animation-delay: 443ms;
+    animation-delay: 443ms;
+}
+
+@-webkit-keyframes tail {
+    0% {
+        width: 0;
+    }
+
+    30% {
+        width: 100px;
+    }
+
+    100% {
+        width: 0;
+    }
+}
+
+@keyframes tail {
+    0% {
+        width: 0;
+    }
+
+    30% {
+        width: 100px;
+    }
+
+    100% {
+        width: 0;
+    }
+}
+
+@-webkit-keyframes shining {
+    0% {
+        width: 0;
+    }
+
+    50% {
+        width: 30px;
+    }
+
+    100% {
+        width: 0;
+    }
+}
+
+@keyframes shining {
+    0% {
+        width: 0;
+    }
+
+    50% {
+        width: 30px;
+    }
+
+    100% {
+        width: 0;
+    }
+}
+
+@-webkit-keyframes shooting {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(300px);
+    }
+}
+
+@keyframes shooting {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(300px);
+    }
+}
+
+@-webkit-keyframes sky {
+    0% {
+        transform: rotate(45deg);
+    }
+
+    100% {
+        transform: rotate(405deg);
+    }
+}
+
+@keyframes sky {
+    0% {
+        transform: rotate(45deg);
+    }
+
+    100% {
+        transform: rotate(405deg);
+    }
+}
+
+/* ^^ Animation blue star Background ^^ */ 
+
+/* Button Customisation of Notes network and Portfolio page */
+
+body {
+    width:100%;
+    position: relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: #000;
+    min-height:100vh;
+  }
+  .container
+  {
+    width:600px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-around;
+  }
+  .container .btn {
+    position:relative;
+    width: 155px;
+    height: 55px;
+    margin:20px;
+  }
+  
+  .container .btn a
+  {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: rgba(255,255,255,0.05);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    border-top: 1px solid rgba(255,255,255,0.1);
+    border-bottom:1px solid rgba(255,255,255,0.1);
+    border-radius: 30px;
+    color: #fff;
+    z-index: 1;
+    font-size: 400;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 0.5s;
+    backdrop-filter: blur(15px);
+    
+  }
+  
+  .container .btn:hover a
+  {
+    letter-spacing: 3px;
+  }
+  
+  .container .btn a::before
+  {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to left, rgba(255,255,255,0.15),
+    transparent);
+    transform: skewX(45deg) translateX(0);
+    transition: 0.5s;
+  }
+  
+  .container .btn:hover a::before
+  {
+    transform: skewX(45deg) translateX(200%);
+  }
+  .container .btn::before
+  {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -5px;
+    width:30px;
+    height:10px;
+    background: #f00;
+    border-radius: 10px;
+    transition: 0.5s;
+    transition-delay: 0s;
+  }
+  .container .btn:hover::before
+  {
+    bottom: 0;
+    height: 50%;
+    width: 80%;
+    border-radius: 30px;
+    transition-delay: 0.5s;
+  }
+  
+  .container .btn::after
+  {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -5px;
+    width:30px;
+    height:10px;
+    background: #f00;
+    border-radius: 10px;
+    transition: 0.5s;
+    transition-delay: 0s;
+  }
+  .container .btn:hover::after
+  {
+    top: 0;
+    height: 50%;
+    width: 80%;
+    border-radius: 30px;
+    transition-delay: 0.5s;
+  }
+  
+  .container .btn:nth-child(1)::before,
+  .container .btn:nth-child(1)::after
+  {
+    background: #ff1f71;
+    box-shadow: 0 0 5px #ff1f71,
+    0 0 15px #ff1f71,
+    0 0 30px #ff1f71,
+    0 0 60px #ff1f71;
+  }
+  
+  .container .btn:nth-child(2)::before,
+  .container .btn:nth-child(2)::after
+  {
+    background: #2bd2ff;
+    box-shadow: 0 0 5px #2bd2ff,
+    0 0 15px #2bd2ff,
+    0 0 30px #2bd2ff,
+    0 0 60px #2bd2ff;
+  }
+  
+  .container .btn:nth-child(3)::before,
+  .container .btn:nth-child(3)::after
+  {
+    background: #1eff45;
+    box-shadow: 0 0 5px #1eff45,
+    0 0 15px #1eff45,
+    0 0 30px #1eff45,
+    0 0 60px #1eff45;
+  }
+
+  /* ^^ Button Customisation of Notes network and Portfolio page ^^ */
+
+  
